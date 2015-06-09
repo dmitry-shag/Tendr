@@ -1,0 +1,26 @@
+﻿@{
+    ViewBag.Title = "EnterForm";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<h3 style="color:blue;">Вход</h3>
+<div class="form-group has-success">
+    <label class="control-label" for="email">Логин: </label>
+    <input type="text" class="form-control" name="email" id="email" placeholder="Введите Ваш логин" required>
+    <span id="error1" class="error"></span>
+</div>
+<div class="form-group has-success">
+    <label class="control-label" for="pass">Пароль: </label>
+    <input type="password" class="form-control" name="pass" id="pass" placeholder="Введите Ваш пароль">
+    <span id="error1" class="error"></span>
+</div>
+
+<input class="btn btn-primary" id="submit" name="submit" value="submit" type="submit">
+<input class="btn btn-primary" id="submit" name="cancel" value="cancel" type="reset">
+<p></p>
+<p>
+    
+    <input type="checkbox" name="allow" value="yes">
+    Оставатся в системе
+</p>

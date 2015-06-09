@@ -1,0 +1,54 @@
+﻿@{
+    ViewBag.Title = "RegForm";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h3>Регистрация</h3>
+<div class="form-group has-success">
+    <label class="control-label" for="name1">Полное наименование компании: </label>
+    <input type="text" class="form-control" name="name1" id="name1" placeholder="Наименование" required>
+    <p id="hidden" style="font: bold 11pt arial"></p>
+    <span id="error1" class="error"></span>
+</div>
+<div class="form-group has-success">
+    <label class="control-label" for="name1">Краткое наименование компании: </label>
+    <input type="text" class="form-control" name="name1" id="name1" placeholder="Наименование" required>
+    <p id="hidden" style="font: bold 11pt arial"></p>
+    <span id="error1" class="error"></span>
+</div>
+<div class="form-group has-success">
+    <label class="control-label" for="name1">Код ЕДРПОУ: </label>
+    <input type="text" class="form-control" name="name1" id="name1" placeholder="ЕДЕРПОУ" required>
+    <p id="hidden" style="font: bold 11pt arial"></p>
+    <span id="error1" class="error"></span>
+</div>
+<div class="form-group has-success">
+    <label class="control-label" for="name1">Серия и номер свидетельства из свидетельства о регистрации: </label>
+    <input type="text" class="form-control" name="name1" id="name1" placeholder="Наименование" required>
+    <p id="hidden" style="font: bold 11pt arial"></p>
+    <span id="error1" class="error"></span>
+</div>
+
+<div class="form-group has-success">
+    <label class="control-label" for="passw1">Пароль: </label>
+    <input type="password" class="form-control" name="passw1" id="passw1" placeholder="от 5 до 9 символов">
+    <span id="error1" class="error"></span>
+</div>
+<div class="form-group has-success">
+    <label class="control-label" for="passw2">Повторите пароль: </label>
+    <input type="password" class="form-control" name="passw2" id="passw2" placeholder="">
+    <span id="error1" class="error"></span>
+</div>
+<div class="form-group has-success">
+    <label class="control-label" for="email1">Email: </label>
+    <input type="text" class="form-control" name="email1" id="email1" placeholder="example@example.com">
+    <span id="error1" class="error"></span>
+</div>
+<div class="form-group has-success">
+    <label class="control-label" for="email1">Телефон: </label>
+    <input type="text" class="form-control" name="email1" id="email1" placeholder="номер телефона">
+    <span id="error1" class="error"></span>
+</div>
+<input class="btn btn-primary" id="submit" name="submit" value="submit" type="submit">
+<input class="btn btn-primary" id="submit" name="cancel" value="cancel" type="reset">
+

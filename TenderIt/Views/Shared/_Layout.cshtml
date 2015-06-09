@@ -3,14 +3,67 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
     <title>@ViewBag.Title</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 </head>
 <body>
-    @RenderBody()
+    <!-- Navbar-->
+    <div class=" container-fluid">
+        <div class="row">
+        <h1 id="logo" style="font-family: Streetwear;">TenderIt</h1>
+            <div class="navbar navbar-inverse">
+                <div class="container-fluid">
+                   <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#lsb">
+                            <span class="sr-only">Открыть навигацию</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                   </div>
+                   <div class=" collapse navbar-collapse" id="lsb">
+                       <!-- -->
+                      <ul class="nav navbar-nav">
+                         <li>@Html.ActionLink("Войти", "EnterForm")</li>
+                         <li>@Html.ActionLink("Регистрация", "RegForm")</li>
+                         <li>@Html.ActionLink("Тендеры", "Tenders")</li>
+                      </ul>   
+                   </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
-    @Scripts.Render("~/bundles/jquery")
+    <div class="container-fluid">
+
+        <div class="row">
+        <!--Leftbar -->
+            <div id="left_bar" class="col-lg-2 col-md-2 col-sm-4">
+                
+                   <ul class="nav nav-pills nav-stacked">
+                      <li role="presentation" class="active">@Html.ActionLink("Главная", "Index")</li>
+                      <li role="presentation"><a href="#">Товары</a></li>
+                      <li role="presentation"><a href="#">Услуги</a></li>
+                      <li role="presentation"><a href="#">Контакты</a></li>
+                   </ul>
+
+
+                
+            </div>
+        <!--Contentbar -->
+            <div id="content_bar" class="col-lg-8  col-md-8 col-sm-6">
+               @RenderBody()
+            </div>
+                 
+    <!--@Scripts.Render("~/bundles/jquery")-->
     @RenderSection("scripts", required: false)
+         </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 </body>
 </html>

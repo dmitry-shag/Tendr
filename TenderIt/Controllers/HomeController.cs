@@ -16,5 +16,18 @@ namespace TenderIt.Controllers
             return View();
         }
 
+		public ViewResult RegForm ()
+		{
+			return View ();
+		}
+		public ViewResult EnterForm ()
+		{
+			return View ();
+		}
+		public ViewResult Tenders ()
+		{
+			return View ();
+		}
+
     }
 }

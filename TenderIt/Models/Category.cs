@@ -26,7 +26,7 @@ namespace TenderIt.Models
     {
         public Guid CompanyId { get; set; }
         public Guid UserId { get; set; }
-        public string CompanyId { get; set; }
+       // public string CompanyId { get; set; } // временно закоментил, у меня ошибку відает при запуске
 
     }
 
