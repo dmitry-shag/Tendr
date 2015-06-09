@@ -138,13 +138,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Data\Tander.mdf" />
-    <Content Include="App_Data\Tander_log.ldf">
-      <DependentUpon>Tander.mdf</DependentUpon>
-    </Content>
-    <Content Include="App_Data\TenderNew.mdf" />
-    <Content Include="App_Data\TenderNew_log.ldf">
-      <DependentUpon>TenderNew.mdf</DependentUpon>
+    <Content Include="App_Data\Tender.mdf" />
+    <Content Include="App_Data\Tender_log.ldf">
+      <DependentUpon>Tender.mdf</DependentUpon>
     </Content>
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
@@ -280,7 +276,5 @@
   </Target>
   <Target Name="AfterBuild">
   </Target> -->
-  <ItemGroup>
-    <Folder Include="Images\" />
-  </ItemGroup>
+  <ItemGroup />
 </Project>
