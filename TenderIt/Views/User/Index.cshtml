@@ -1,0 +1,23 @@
+﻿@model IEnumerable<TenderIt.Models.User>
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Контакты</h2>
+
+<table border="1">
+    <tr>
+        <td><p style="margin-left: 5px;">Логин</p></td>
+        <td><p style="margin-left: 5px;">Email</p></td>
+        <td><p style="margin-left: 5px;">Телефон</p></td>
+    </tr>
+    @foreach (TenderIt.Models.User item in Model)
+    {
+    <tr>
+        <td><p style="margin-left: 5px;">@item.Login</p></td>
+        <td><p style="margin-left: 5px;">@item.Email</p></td>
+        <td><p style="margin-left: 5px;">@item.Phone</p></td>
+    </tr>
+    }
+</table>

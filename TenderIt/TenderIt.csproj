@@ -130,18 +130,27 @@
     <Compile Include="App_Start\NinjectWebCommon.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\CategoryController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ProductController.cs" />
+    <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\Category.cs" />
+    <Compile Include="Models\Company.cs" />
+    <Compile Include="Models\CompanyFeedback.cs" />
+    <Compile Include="Models\CompanyInCategory.cs" />
+    <Compile Include="Models\Contexts\TenderItContext.cs" />
+    <Compile Include="Models\Initializers\TenderItInitializer.cs" />
+    <Compile Include="Models\ProductTable.cs" />
+    <Compile Include="Models\Tender.cs" />
+    <Compile Include="Models\TenderOffer.cs" />
+    <Compile Include="Models\UserProfile.cs" />
+    <Compile Include="Models\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Data\Tender.mdf" />
-    <Content Include="App_Data\Tender_log.ldf">
-      <DependentUpon>Tender.mdf</DependentUpon>
-    </Content>
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
@@ -232,8 +241,13 @@
     <Content Include="Views\Home\RegForm.cshtml" />
     <Content Include="Views\Home\EnterForm.cshtml" />
     <Content Include="Views\Home\Tenders.cshtml" />
+    <Content Include="Views\Product\Index.cshtml" />
+    <Content Include="Views\Category\Index.cshtml" />
+    <Content Include="Views\User\Index.cshtml" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
   </ItemGroup>

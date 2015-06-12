@@ -7,6 +7,9 @@ using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
 using Ninject.Web.Common;
+using System.Data.Entity;
+using TenderIt.Models.Contexts;
+using TenderIt.Models.Initializers;
 
 namespace TenderIt
 {
@@ -25,6 +28,11 @@ namespace TenderIt
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
+
+            Database.SetInitializer<TenderItContext>(new TenderItInitializer());
+
+            TenderItContext tenderItContext = new TenderItContext();
+            tenderItContext.Database.Initialize(true);
         }
 
         public void Init()

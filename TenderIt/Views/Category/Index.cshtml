@@ -1,0 +1,19 @@
+﻿@model IEnumerable<TenderIt.Models.Category>
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Услуги</h2>
+
+<table border="1">
+    <tr>
+        <td><p style="margin-left: 5px;">Название</p></td>
+    </tr>
+    @foreach (TenderIt.Models.Category item in Model)
+    {
+    <tr>
+        <td><p style="margin-left: 5px;">@item.Name</p></td>
+    </tr>
+    }
+</table>
